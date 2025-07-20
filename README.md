@@ -63,6 +63,7 @@ synthetic-data-generator3/
 │       ├── vector_store_factory.py
 │       └── vector_db.py
 ├── .env
+├── .env.example
 ├── requirements.txt
 └── README.md
 ```
@@ -81,7 +82,17 @@ synthetic-data-generator3/
    ```
 
 3. **Configure environment variables:**
-   Create a `.env` file in the root directory:
+   - Copy `.env.example` to `.env`:
+     ```
+     cp .env.example .env
+     ```
+   - Edit `.env` and fill in your actual secrets and configuration values.
+
+   The `.env.example` file lists all required environment variables with example values commented out.  
+   Use it as a template to create your own `.env` file, which should contain your real credentials and settings.  
+   **Do not commit your `.env` file to version control.**
+
+   Example:
    ```
    AZURE_API_KEY=<your_azure_api_key>
    AZURE_SEARCH_SERVICE=<your_search_service_name>
@@ -163,6 +174,15 @@ AZURE_COSMOS_CONNECTION_STRING=your_cosmos_connection_string
 COSMOS_DATABASE_NAME=synthetic_data
 COSMOS_CONTAINER_NAME=vectors
 ```
+
+## Environment Variables
+
+- `.env.example` provides a template for all required environment variables. All values are commented out and should be replaced with your actual secrets in a `.env` file.
+- To get started, copy `.env.example` to `.env` and edit as needed:
+  ```
+  cp .env.example .env
+  ```
+- The `.env` file is used by the application to load configuration and secrets at runtime.
 
 ## Core Components
 
