@@ -1,0 +1,1 @@
+# This file marks the vector_store directory as a package.
